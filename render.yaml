@@ -3,7 +3,7 @@ services:
     name: shopline-auth
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
     startCommand: gunicorn shopline_auth.wsgi
     envVars:
       - key: SECRET_KEY
