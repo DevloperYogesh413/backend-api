@@ -1,0 +1,22 @@
+{% extends "accounts/base.html" %}
+
+{% block content %}
+  <section class="card">
+    <h2>Login</h2>
+    <form method="post">
+      {% csrf_token %}
+      <label>Username or Email</label>
+      <input type="text" name="username" value="{{ data.username|default:'' }}" />
+      <label>Password</label>
+      <input type="password" name="password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+    <p>Need an account? <a href="{% url 'signup' %}">Sign up</a></p>
+    {% if errors %}
+      <div class="errors">
+        <pre>{{ errors }}</pre>
+      </div>
+    {% endif %}
+  </section>
+{% endblock %}

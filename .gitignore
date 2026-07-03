@@ -1,0 +1,39 @@
+.venv/
+venv/
+myenv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+env.bak/
+*.sqlite3
+/db.sqlite3
+/staticfiles/
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.pot
+*.py[cod]
+*.swp
+*.swo
+*.coverage
+coverage.xml
+htmlcov/
+.tox/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+.eggs/
+
+# dotenv
+.env
+
+# PyCharm
+*.iml
+
+# OS files
+Thumbs.db
+Desktop.ini
